@@ -5,6 +5,8 @@ export interface KlineChartComponentProps {
   height?: number;
   data: KLineData[];
   className?: string;
+  indicator?: string;
+  subIndicator?: string;
 }
 
 export interface KlineChartParamsRequest {
