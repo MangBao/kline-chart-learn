@@ -1,11 +1,11 @@
 import { reqGET } from "@/shared/apis/api-client";
-import { env } from "@/shared/constants/env";
+import { adaptKlineData } from "@/adapters/kline.adapter";
+import type { KlineChartParamsRequest } from "@/types";
 
 class KlineService {
-  getKlineData() {
-    return reqGET("/datas/kline.json", undefined, {
-      customBaseURL: env.KLINE_API_URL,
-    });
+  async getKlineData(params: KlineChartParamsRequest) {
+    const rawData = await reqGET("/api/v3/klines", params);
+    return adaptKlineData(rawData);
   }
 }
 

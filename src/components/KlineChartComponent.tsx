@@ -4,7 +4,7 @@ import type { KlineChartComponentProps } from "@/types";
 
 const KlineChartComponent = ({
   width = undefined,
-  height = 400,
+  height = 485,
   data,
   className = "",
 }: KlineChartComponentProps) => {

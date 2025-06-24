@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@klinecharts/pro": "^0.1.1",
     "@tanstack/react-query": "^5.81.2",
     "klinecharts": "^10.0.0-alpha5",
     "react": "^19.1.0",
@@ -17,12 +18,14 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@tailwindcss/vite": "^4.1.10",
     "@types/axios": "^0.14.4",
     "@types/node": "^24.0.3",
     "@types/react": "^19.1.2",
     "@types/react-dom": "18",
     "@vitejs/plugin-react": "^4.4.1",
     "autoprefixer": "^10.4.21",
+    "daisyui": "^5.0.43",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",

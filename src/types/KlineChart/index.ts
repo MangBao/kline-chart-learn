@@ -6,3 +6,9 @@ export interface KlineChartComponentProps {
   data: KLineData[];
   className?: string;
 }
+
+export interface KlineChartParamsRequest {
+  symbol?: string;
+  interval?: string;
+  limit?: number;
+}
