@@ -1,11 +1,12 @@
 import "@/App.css";
-import KlineChartContainer from "@/components/KlineChartContainer";
+import { KlineChartPage } from "@pages/KlineChart";
 
 function App() {
   return (
     <>
       <div>
-        <KlineChartContainer />
+        <KlineChartPage />
+        {/* <KlineChartProPage /> */}
       </div>
     </>
   );

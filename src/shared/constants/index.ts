@@ -10,25 +10,10 @@ export const timeframes = [
   "1M",
 ];
 
-export const symbols = [
-  "BTCUSDT",
-  "BNBBTC",
-  "ETHBTC",
-  "XRPBTC",
-  "LTCBTC",
-  "BCHBTC",
-  "EOSBTC",
-  "TRXBTC",
-  "XLMBTC",
-  "LINKBTC",
-  "ETCBTC",
-  "NEOBTC",
-  "QTUMBTC",
-  "ZRXBTC",
-  "DASHBTC",
-  "XMRBTC",
-  "DOGEBTC",
-  "IOTABTC",
-  "VETBTC",
-  "ONTBTC",
+export const subIndicators = [
+  { label: "None", value: "" },
+  { label: "MACD", value: "MACD" },
+  { label: "RSI", value: "RSI" },
+  { label: "BOLL", value: "BOLL" },
+  { label: "Volume", value: "VOL" },
 ];

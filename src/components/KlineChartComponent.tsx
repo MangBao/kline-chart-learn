@@ -4,8 +4,10 @@ import type { KlineChartComponentProps } from "@/types";
 
 const KlineChartComponent = ({
   width = undefined,
-  height = 485,
+  height = 620,
   data,
+  indicator,
+  subIndicator, // 👈 thêm mới
   className = "",
 }: KlineChartComponentProps) => {
   const chartRef = useRef<Chart | null>(null);
@@ -21,13 +23,23 @@ const KlineChartComponent = ({
 
     chart.applyNewData(data);
 
+    // Overlay indicator (trên biểu đồ nến, ví dụ: MA, EMA)
+    if (indicator) {
+      chart.createIndicator(indicator, true, { id: "candle_pane" });
+    }
+
+    // Sub-indicator (pane phụ, ví dụ: MACD, RSI, Volume)
+    if (subIndicator) {
+      chart.createIndicator(subIndicator, false); // không truyền id -> tạo sub pane
+    }
+
     return () => {
       if (containerRef.current) {
         dispose(containerRef.current);
       }
       chartRef.current = null;
     };
-  }, [data]);
+  }, [data, indicator, subIndicator]);
 
   return (
     <div ref={containerRef} className={className} style={{ width, height }} />
